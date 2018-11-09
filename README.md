@@ -17,6 +17,7 @@ Views:
 - list style view
 
 TO DO:
+- bigger screen styling
 - user authentication / registration
 - logged user view
 - logged user order/reserve
