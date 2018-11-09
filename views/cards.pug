@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  each book, i in books
+    .body__entry.cardView
+      .entry__img
+        if book.thumbnailUrl
+          img.picFrame(src=book.thumbnailUrl, onerror="this.onerror=null;this.src='https://picsum.photos/200/250';" alt=book.title)
+        else 
+          img.picFrame(src='https://picsum.photos/200/250', onerror="this.onerror=null;this.src='https://picsum.photos/200/250';" alt=book.title)
+      h3= book.title
+      p= book.authors

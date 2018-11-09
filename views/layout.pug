@@ -1,0 +1,37 @@
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width,initial-scale=1')
+meta(http-equiv='X-UA-Compatible', content='ie=edge')
+title Books you need, not the books you want
+link(rel='stylesheet', href='/style/style.css')
+link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.5.0/css/all.css', integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU', crossorigin='anonymous')
+link(href='https://fonts.googleapis.com/css?family=Nanum+Gothic', rel='stylesheet')
+.app#app
+  .app__header
+    .header__logo
+      img(src='/img/books_logo.svg', alt='Books is all we need').logo
+    .header__menuBtn#burger
+      img#burger_icon(src='/img/hamburger.png')
+  .app__menu#app__menu
+    .container
+      .menu__forms
+        h5 Members log-in
+        p username:
+        input#username.inptUser(type='text', name='username')
+        p password:
+        input#password.inptUser(type='password', name='password')
+      .menu__buttons
+        button.login__btn log-in
+        p Forgot password?
+        p Register account?
+  .app__search
+    input#search.search__inpt(type='text')
+    i.fas.fa-search.search_btn
+  .app__views--menu
+    i.fas.fa-list-ul.left--icon#listView
+    i.fas.fa-th.middle--icon#cardsView
+    i.fas.fa-cubes.rigth--icon
+  .app__body
+    block content
+  .app__footer
+    p © 20018 - Ion Rosgrim
+script(src='/app/app.js')

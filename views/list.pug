@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  each book, i in books
+    .body__entry.listView
+      i.far.fa-plus-square.checkButton
+      .bookEntry
+        h3 "#{book.title}"
+        p #{book.authors.toString()}, 
+          strong #{book.publishedDate.$date.substring(0, 4)}
+    .description
+      .bookPic-Buttons
+          .bookPic-colleft
+            if book.thumbnailUrl
+              img.picFrame(src=book.thumbnailUrl, onerror="this.onerror=null;this.src='https://picsum.photos/200/300';" alt=book.title)
+            else 
+              img.picFrame(src='https://picsum.photos/200/300', onerror="this.onerror=null;this.src='http://example.com/existent-image.jpg';" alt=book.title)
+          .bookPic-colright
+            button.btn#borrowBtn borrow
+            button.btn#reserveBtn reserve
+            p
+              strong ISBN:
+              | #{book.isbn}
+            p 
+              strong Published: 
+              | #{book.publishedDate.$date.substring(0, 10)}
+            p 
+              strong Pages: 
+              | #{book.pageCount}
+            p 
+              strong Category: 
+              | #{book.categories}
+      if book.shortDescription
+        h5 Short Description:
+        p=book.shortDescription
+      else if book.longDescription
+        h5 Long description:
+        p=book.longDescription
+      else
+        h5 No description available
