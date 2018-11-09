@@ -49,7 +49,7 @@ listView.addEventListener('click', () => {
 cardsView.addEventListener('click', () => {
     console.log(viewStatus);
     if (viewStatus !== 1) {
-        getView('cards');
+        getView('books');
 
     }
 })

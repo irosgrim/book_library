@@ -14,36 +14,35 @@ app.set('view engine', 'pug');
 app.use(jsonParser);
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (request, response)=>{
-    console.log(mongoDB.connectToMongo());
+app.get('/', (request, response) => {
     console.log(request);
     response.send('./public/index.html');
 })
 
-app.get('/cards/', (request, response) =>{
-    fs.readFile(jsonFileName, 'utf-8', function(err, data) {
+app.get('/books/', (request, response) => {
+    fs.readFile(jsonFileName, 'utf-8', function (err, data) {
         if (err) throw err
         var booksArray = JSON.parse(data)
-   
-    response.render('cards', { 
-        books: booksArray
-    })
-});
+
+        response.render('cards', {
+            books: booksArray
+        })
+    });
 });
 
-app.get('/list/', (request, response) =>{
-    fs.readFile(jsonFileName, 'utf-8', function(err, data) {
+app.get('/list/', (request, response) => {
+    fs.readFile(jsonFileName, 'utf-8', function (err, data) {
         if (err) throw err
         var booksArray = JSON.parse(data)
-   // response.send(booksArray);
-    response.render('list', { 
-        books: booksArray
-    })
-});
+        // response.send(booksArray);
+        response.render('list', {
+            books: booksArray
+        })
+    });
 });
 
 app.get('/p/', function (request, response) {
-    
-  })
+
+})
 
 app.listen(3000, () => console.log(`Server is running `));
