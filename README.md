@@ -1,4 +1,4 @@
-###Book Library web application - work in progress###
+### Book Library web application - work in progress 
 
 ![Book library screenshot](public/img/screenShot.png)
 
