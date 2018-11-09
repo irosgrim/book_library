@@ -1,22 +1,21 @@
-Book Library web application - 
-work in progress
+###Book Library web application - work in progress
 
-What i did  so far:
+**What i did  so far:**
 
 - nodeJs server
 - express routing
 - server rendered views (PUG)
 - local JSON file storage populated with a few books
 
-Design:
+**Design:**
 - Mobile First - responsive design
 - minimalist design
 
-Views:
+**Views:**
 - card style view
 - list style view
 
-TO DO:
+**TO DO:**
 - bigger screen styling
 - user authentication / registration
 - logged user view
