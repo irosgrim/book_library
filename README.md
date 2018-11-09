@@ -1,5 +1,8 @@
 ###Book Library web application - work in progress###
 
+![Book library screenshot](public/img/screenShot.png)
+
+
 **What i did  so far:**
 
 - nodeJs server
